@@ -1,0 +1,454 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: waynesg\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: zh_CN\n"
+"X-Generator: Poedit 2.3.1\n"
+
+msgid ""
+msgstr "Content-Type: text/plain; charset=UTF-8"
+
+msgid "<abbr title=\"Light Emitting Diode\">LED</abbr> Name"
+msgstr ""
+
+msgid "<abbr title=\"Light Emitting Diode\">LED</abbr> control"
+msgstr "LED 控制"
+
+msgid ""
+"<abbr title=\"Light Emitting Diode\">LED</abbr> is on when Internet is "
+"available."
+msgstr "Internet可用时LED灯亮"
+
+msgid "Alive interval"
+msgstr "活动时间间隔"
+
+msgid "Alive period"
+msgstr "存活时间"
+
+msgid ""
+"An email will be sent when the internet connection is restored after being "
+"disconnected."
+msgstr "当互联网连接断开后恢复时，将发送电子邮件通知"
+
+msgid "An error has occurred"
+msgstr "发生了错误"
+
+msgid "Big: 248 bytes"
+msgstr ""
+
+msgid "Check type"
+msgstr "检查类型"
+
+msgid "Checking Internet availability."
+msgstr "检查互联网是否可用"
+
+msgid "Checking the real public IP address."
+msgstr "检查真实的公共IP地址"
+
+msgid "Command failed"
+msgstr "命令失败"
+
+msgid "Connected"
+msgstr "已连接"
+
+msgid "Connection attempts"
+msgstr "连接尝试"
+
+msgid "Connection timeout"
+msgstr "连接超时"
+
+msgid "Contents have been saved."
+msgstr "保存成功"
+
+msgid "Dead interval"
+msgstr ""
+
+msgid "Dead period"
+msgstr ""
+
+msgid "Default port value for TCP connections."
+msgstr "TCP连接的默认端口值"
+
+msgid "Device will be rebooted when the Internet is disconnected."
+msgstr "在Internet断开连接时设备将重新启动"
+
+msgid "Disable forced reboot"
+msgstr "禁止强制重启"
+
+msgid "Disabled"
+msgstr "已禁用"
+
+msgid "Disabled: detector is completely off."
+msgstr "Disabled: 检测器完全关闭"
+
+msgid "Disconnected"
+msgstr "已断开"
+
+msgid "Dismiss"
+msgstr "取消"
+
+msgid "DNS provider"
+msgstr "DNS 供应商"
+
+msgid "Edit"
+msgstr "编辑"
+
+msgid "Edit down-script"
+msgstr ""
+
+msgid "Edit up-script"
+msgstr ""
+
+msgid "Email notification"
+msgstr "电子邮件通知"
+
+msgid "Email address of the recipient."
+msgstr "收件人电子邮件地址"
+
+msgid "Email address of the sender."
+msgstr "发件人电子邮件地址"
+
+msgid "Enable"
+msgstr ""
+
+msgid "Enable logging"
+msgstr ""
+
+msgid "Enabled"
+msgstr ""
+
+msgid "Expecting:"
+msgstr ""
+
+msgid "Public IP"
+msgstr ""
+
+msgid "Public IP address"
+msgstr ""
+
+msgid "Failed to get %s init status: %s"
+msgstr ""
+
+msgid "Forced reboot delay"
+msgstr ""
+
+msgid "Host alias"
+msgstr ""
+
+msgid "Host availability check type."
+msgstr ""
+
+msgid "Host identifier in messages. If not specified, hostname will be used."
+msgstr ""
+
+msgid "Hostname/IP address of the SMTP server."
+msgstr ""
+
+msgid "Hosts"
+msgstr ""
+
+msgid "Hosts polling interval when the Internet is down."
+msgstr ""
+
+msgid "Hosts polling interval when the Internet is up."
+msgstr ""
+
+msgid ""
+"Hosts to check Internet availability. Hosts are polled (in list order) until "
+"at least one of them responds."
+msgstr ""
+
+msgid "Huge: 1492 bytes"
+msgstr ""
+
+msgid "Interface"
+msgstr ""
+
+msgid "Internet"
+msgstr "Internet"
+
+msgid "Internet Detector"
+msgstr "Internet Detector"
+
+msgid "Internet detector mode"
+msgstr "接口"
+
+msgid "Internet status"
+msgstr "Internet 状态"
+
+msgid "Interval between IP address requests."
+msgstr ""
+
+msgid "Jumbo: 9000 bytes"
+msgstr ""
+
+msgid "LED control"
+msgstr ""
+
+msgid "Loading"
+msgstr ""
+
+msgid ""
+"Longest period of time after connecting to Internet before \"up-script\" "
+"runs."
+msgstr "连接到互联网后up-script脚本运行的最长时间"
+
+msgid ""
+"Longest period of time after connecting to the Internet before sending a "
+"message."
+msgstr "连接到互联网后发送消息前的最长时间"
+
+msgid ""
+"Longest period of time after disconnecting from Internet before \"down-script"
+"\" runs."
+msgstr "断开互联网连接后down-script脚本运行的最长时间"
+
+msgid "Longest period of time without Internet access before modem restart."
+msgstr "调制解调器重新启动前,没有互联网访问的最长时间"
+
+msgid "Longest period of time without Internet access before network restart."
+msgstr "网络重新启动前,没有互联网访问的最长时间"
+
+msgid ""
+"Longest period of time without Internet access until the device is rebooted."
+msgstr "设备重新启动前,没有互联网访问的最长时间"
+
+msgid "Mailsend is not available..."
+msgstr "Mailsend 不可用"
+
+msgid "Main settings"
+msgstr "主要设置"
+
+msgid "Maximum number of attempts to connect to each host."
+msgstr "每个主机尝试连接的最大次数"
+
+msgid ""
+"Maximum number of network restart attempts before Internet access is "
+"available."
+msgstr "Internet可用前的最大网络重启尝试次数"
+
+msgid "Maximum timeout for waiting for a response from the host."
+msgstr "主机响应的最大等待超时时间"
+
+msgid "Modem will be restarted when the Internet is disconnected."
+msgstr "当Internet连接断开时，Modem将重新启动"
+
+msgid "ModemManager is not available..."
+msgstr ""
+
+msgid ""
+"ModemManger interface. If specified, it will be restarted after restarting "
+"ModemManager."
+msgstr ""
+
+msgid ""
+"Network interface for Internet access. If not specified, the default "
+"interface is used."
+msgstr ""
+
+msgid ""
+"Network interface to restart. If not specified, then the network service is restarted."
+msgstr ""
+
+msgid "Network will be restarted when the Internet is disconnected."
+msgstr ""
+
+msgid "No <abbr title=\"Light Emitting Diode\">LED</abbr>s available..."
+msgstr ""
+
+msgid "One of the following:"
+msgstr ""
+
+msgid "Password"
+msgstr ""
+
+msgid "Password for SMTP authentication."
+msgstr ""
+
+msgid ""
+"Performing actions when connecting and disconnecting the Internet (available "
+"in the \"Service\" mode)."
+msgstr "当连接和断开互联网时执行操作（在 “Service” 模式下可用）"
+
+msgid "Ping host"
+msgstr "Ping 主机"
+
+msgid "Ping packet size"
+msgstr "Ping 数据包大小"
+
+msgid "Polling interval"
+msgstr "轮询间隔"
+
+msgid "Reboot device"
+msgstr "重启设备"
+
+msgid "Recipient"
+msgstr "接收者"
+
+msgid "Restart"
+msgstr ""
+
+msgid "Restart attempts"
+msgstr "重新启动尝试"
+
+msgid "Restart modem"
+msgstr "重启 modem"
+
+msgid "Restart network"
+msgstr "重启网络"
+
+msgid "Restart service"
+msgstr "重启服务"
+
+msgid "Restart timeout"
+msgstr "重启超时"
+
+msgid "Run service at startup"
+msgstr "启动时运行服务"
+
+msgid "Running"
+msgstr "运行中"
+
+msgid "SMTP server"
+msgstr "SMTP 服务器"
+
+msgid "SMTP server port"
+msgstr "SMTP 服务端口"
+
+msgid "SSL: SMTP over SSL."
+msgstr "SSL: SMTP over SSL"
+
+msgid "Save"
+msgstr "保存"
+
+msgid "Security"
+msgstr ""
+
+msgid "Sender"
+msgstr "发送者"
+
+msgid "Server response timeout"
+msgstr "服务器响应超时"
+
+msgid "Service"
+msgstr "服务状态"
+
+msgid "Service action failed \"%s %s\": %s"
+msgstr "服务操作失败"
+
+msgid "Service configuration"
+msgstr "服务配置"
+
+msgid "Service for determining the public IP address through DNS."
+msgstr "基于 DNS 确定公共 IP 地址的服务"
+
+msgid "Service modules"
+msgstr "服务模块"
+
+msgid "Service: detector always runs as a system service."
+msgstr "Service:检测器始终作为系统服务运行"
+
+msgid "Set the modem to be allowed to use any band."
+msgstr ""
+
+msgid "Shell commands that run when connected to the Internet."
+msgstr "连接到Internet时运行的Shell命令"
+
+msgid "Shell commands to run when connected or disconnected from the Internet."
+msgstr "连接或断开Internet时要运行的Shell命令"
+
+msgid "Shell commands to run when disconnected from the Internet."
+msgstr "断开Internet时要运行的Shell命令"
+
+msgid "Small: 1 byte"
+msgstr ""
+
+msgid "Standard: 56 bytes"
+msgstr ""
+
+msgid "Stopped"
+msgstr ""
+
+msgid "TCP port"
+msgstr ""
+
+msgid "TCP port connection"
+msgstr ""
+
+msgid "TLS: use STARTTLS if the server supports it."
+msgstr ""
+
+msgid "Timeout between stopping and starting the interface."
+msgstr ""
+
+msgid "Type a time string"
+msgstr ""
+
+msgid "UI detector configuration"
+msgstr ""
+
+msgid "Unable to read the contents"
+msgstr ""
+
+msgid "Unable to save the contents"
+msgstr ""
+
+msgid "Undefined"
+msgstr ""
+
+msgid "Unlock modem bands"
+msgstr ""
+
+msgid "User"
+msgstr ""
+
+msgid "User scripts"
+msgstr ""
+
+msgid "Username for SMTP authentication."
+msgstr ""
+
+msgid "Waiting for a reboot to complete before performing a forced reboot."
+msgstr ""
+
+msgid "Web UI only"
+msgstr ""
+
+msgid "Web UI only: detector works only when the Web UI is open (UI detector)."
+msgstr ""
+
+msgid "Windows: 32 bytes"
+msgstr ""
+
+msgid "Write messages to the system log."
+msgstr ""
+
+msgid "down-script"
+msgstr ""
+
+msgid "hour"
+msgstr ""
+
+msgid "hours"
+msgstr ""
+
+msgid "min"
+msgstr ""
+
+msgid "minutes"
+msgstr ""
+
+msgid "sec"
+msgstr ""
+
+msgid "seconds"
+msgstr ""
+
+msgid "up-script"
+msgstr ""
