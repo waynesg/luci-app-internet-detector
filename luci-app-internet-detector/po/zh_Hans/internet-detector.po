@@ -67,10 +67,10 @@ msgid "Contents have been saved."
 msgstr "保存成功"
 
 msgid "Dead interval"
-msgstr ""
+msgstr "失效时间间隔"
 
 msgid "Dead period"
-msgstr ""
+msgstr "失效时间"
 
 msgid "Default port value for TCP connections."
 msgstr "TCP连接的默认端口值"
@@ -82,7 +82,7 @@ msgid "Disable forced reboot"
 msgstr "禁止强制重启"
 
 msgid "Disabled"
-msgstr "已禁用"
+msgstr ""
 
 msgid "Disabled: detector is completely off."
 msgstr "Disabled: 检测器完全关闭"
@@ -100,10 +100,10 @@ msgid "Edit"
 msgstr "编辑"
 
 msgid "Edit down-script"
-msgstr ""
+msgstr "编辑 down-script"
 
 msgid "Edit up-script"
-msgstr ""
+msgstr "编辑 up-script"
 
 msgid "Email notification"
 msgstr "电子邮件通知"
@@ -115,60 +115,60 @@ msgid "Email address of the sender."
 msgstr "发件人电子邮件地址"
 
 msgid "Enable"
-msgstr ""
+msgstr "启用"
 
 msgid "Enable logging"
-msgstr ""
+msgstr "启用日志记录"
 
 msgid "Enabled"
-msgstr ""
+msgstr "已启用"
 
 msgid "Expecting:"
 msgstr ""
 
 msgid "Public IP"
-msgstr ""
+msgstr "IP"
 
 msgid "Public IP address"
-msgstr ""
+msgstr "IP 地址"
 
 msgid "Failed to get %s init status: %s"
 msgstr ""
 
 msgid "Forced reboot delay"
-msgstr ""
+msgstr "强制重启延迟"
 
 msgid "Host alias"
-msgstr ""
+msgstr "主机别名"
 
 msgid "Host availability check type."
-msgstr ""
+msgstr "主机可用性检查类型"
 
 msgid "Host identifier in messages. If not specified, hostname will be used."
-msgstr ""
+msgstr "消息中的主机标识符。如果未指定，则将使用主机名"
 
 msgid "Hostname/IP address of the SMTP server."
-msgstr ""
+msgstr "SMTP服务器的主机名/IP地址"
 
 msgid "Hosts"
 msgstr ""
 
 msgid "Hosts polling interval when the Internet is down."
-msgstr ""
+msgstr "当互联网断开连接时，主机轮询间隔"
 
 msgid "Hosts polling interval when the Internet is up."
-msgstr ""
+msgstr "当互联网连接正常时，主机轮询间隔"
 
 msgid ""
 "Hosts to check Internet availability. Hosts are polled (in list order) until "
 "at least one of them responds."
-msgstr ""
+msgstr "检查互联网可用性的主机。按列表顺序轮询主机，直到至少有一个响应为止"
 
 msgid "Huge: 1492 bytes"
 msgstr ""
 
 msgid "Interface"
-msgstr ""
+msgstr "接口"
 
 msgid "Internet"
 msgstr "Internet"
@@ -177,19 +177,19 @@ msgid "Internet Detector"
 msgstr "Internet Detector"
 
 msgid "Internet detector mode"
-msgstr "接口"
+msgstr "Internet 检测器模式"
 
 msgid "Internet status"
 msgstr "Internet 状态"
 
 msgid "Interval between IP address requests."
-msgstr ""
+msgstr "IP地址请求之间的时间间隔"
 
 msgid "Jumbo: 9000 bytes"
 msgstr ""
 
 msgid "LED control"
-msgstr ""
+msgstr "LED 控制"
 
 msgid "Loading"
 msgstr ""
@@ -226,7 +226,7 @@ msgid "Main settings"
 msgstr "主要设置"
 
 msgid "Maximum number of attempts to connect to each host."
-msgstr "每个主机尝试连接的最大次数"
+msgstr "连接每个主机的最大尝试次数"
 
 msgid ""
 "Maximum number of network restart attempts before Internet access is "
@@ -240,36 +240,36 @@ msgid "Modem will be restarted when the Internet is disconnected."
 msgstr "当Internet连接断开时，Modem将重新启动"
 
 msgid "ModemManager is not available..."
-msgstr ""
+msgstr "ModemManager 不可用"
 
 msgid ""
 "ModemManger interface. If specified, it will be restarted after restarting "
 "ModemManager."
-msgstr ""
+msgstr "ModemManager 接口。如果指定，则在重新启动 ModemManager 后将其重启"
 
 msgid ""
 "Network interface for Internet access. If not specified, the default "
 "interface is used."
-msgstr ""
+msgstr "互联网访问的网络接口。如果未指定，则使用默认接口"
 
 msgid ""
 "Network interface to restart. If not specified, then the network service is restarted."
-msgstr ""
+msgstr "需要重新启动网络接口。如果未指定，则将重启网络服务"
 
 msgid "Network will be restarted when the Internet is disconnected."
-msgstr ""
+msgstr "当互联网断开连接时，网络将重新启动"
 
 msgid "No <abbr title=\"Light Emitting Diode\">LED</abbr>s available..."
-msgstr ""
+msgstr "没有可用的LED"
 
 msgid "One of the following:"
-msgstr ""
+msgstr "以下之一"
 
 msgid "Password"
 msgstr ""
 
 msgid "Password for SMTP authentication."
-msgstr ""
+msgstr "SMTP认证密码"
 
 msgid ""
 "Performing actions when connecting and disconnecting the Internet (available "
@@ -328,7 +328,7 @@ msgid "Save"
 msgstr "保存"
 
 msgid "Security"
-msgstr ""
+msgstr "安全"
 
 msgid "Sender"
 msgstr "发送者"
@@ -337,7 +337,7 @@ msgid "Server response timeout"
 msgstr "服务器响应超时"
 
 msgid "Service"
-msgstr "服务状态"
+msgstr ""
 
 msgid "Service action failed \"%s %s\": %s"
 msgstr "服务操作失败"
@@ -352,10 +352,10 @@ msgid "Service modules"
 msgstr "服务模块"
 
 msgid "Service: detector always runs as a system service."
-msgstr "Service:检测器始终作为系统服务运行"
+msgstr "Service: 检测器始终作为系统服务运行"
 
 msgid "Set the modem to be allowed to use any band."
-msgstr ""
+msgstr "将调制解调器设置为允许使用任何频段"
 
 msgid "Shell commands that run when connected to the Internet."
 msgstr "连接到Internet时运行的Shell命令"
@@ -373,61 +373,61 @@ msgid "Standard: 56 bytes"
 msgstr ""
 
 msgid "Stopped"
-msgstr ""
+msgstr "已停止"
 
 msgid "TCP port"
-msgstr ""
+msgstr "TCP 端口"
 
 msgid "TCP port connection"
-msgstr ""
+msgstr "TCP 端口连接"
 
 msgid "TLS: use STARTTLS if the server supports it."
-msgstr ""
+msgstr "TLS：如果服务器支持，请使用STARTTLS"
 
 msgid "Timeout between stopping and starting the interface."
-msgstr ""
+msgstr "停止和启动接口之间的超时时间"
 
 msgid "Type a time string"
-msgstr ""
+msgstr "输入时间字符串"
 
 msgid "UI detector configuration"
-msgstr ""
+msgstr "UI 检测器配置"
 
 msgid "Unable to read the contents"
-msgstr ""
+msgstr "无法读取内容"
 
 msgid "Unable to save the contents"
-msgstr ""
+msgstr "无法保存内容"
 
 msgid "Undefined"
-msgstr ""
+msgstr "未定义"
 
 msgid "Unlock modem bands"
-msgstr ""
+msgstr "解锁调制解调器频段"
 
 msgid "User"
-msgstr ""
+msgstr "用户"
 
 msgid "User scripts"
-msgstr ""
+msgstr "用户脚本"
 
 msgid "Username for SMTP authentication."
-msgstr ""
+msgstr "SMTP认证的用户名"
 
 msgid "Waiting for a reboot to complete before performing a forced reboot."
-msgstr ""
+msgstr "在执行强制重启之前，等待重新启动完成"
 
 msgid "Web UI only"
 msgstr ""
 
 msgid "Web UI only: detector works only when the Web UI is open (UI detector)."
-msgstr ""
+msgstr "Web UI only: 检测器仅在Web UI打开时工作（UI检测器）"
 
 msgid "Windows: 32 bytes"
 msgstr ""
 
 msgid "Write messages to the system log."
-msgstr ""
+msgstr "将消息写入系统日志"
 
 msgid "down-script"
 msgstr ""
