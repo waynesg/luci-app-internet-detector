@@ -82,7 +82,7 @@ msgid "Disable forced reboot"
 msgstr "禁止强制重启"
 
 msgid "Disabled"
-msgstr ""
+msgstr "禁用"
 
 msgid "Disabled: detector is completely off."
 msgstr "Disabled: 检测器完全关闭"
@@ -337,7 +337,7 @@ msgid "Server response timeout"
 msgstr "服务器响应超时"
 
 msgid "Service"
-msgstr ""
+msgstr "服务"
 
 msgid "Service action failed \"%s %s\": %s"
 msgstr "服务操作失败"
@@ -352,7 +352,7 @@ msgid "Service modules"
 msgstr "服务模块"
 
 msgid "Service: detector always runs as a system service."
-msgstr "Service: 检测器始终作为系统服务运行"
+msgstr "服务: 检测器始终作为系统服务运行"
 
 msgid "Set the modem to be allowed to use any band."
 msgstr "将调制解调器设置为允许使用任何频段"
