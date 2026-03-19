@@ -11,11 +11,9 @@ msgstr ""
 "Language: zh_CN\n"
 "X-Generator: Poedit 2.3.1\n"
 
-msgid ""
-msgstr "Content-Type: text/plain; charset=UTF-8"
 
 msgid "<abbr title=\"Light Emitting Diode\">LED</abbr> Name"
-msgstr ""
+msgstr "LED 名称"
 
 msgid "<abbr title=\"Light Emitting Diode\">LED</abbr> control"
 msgstr "LED 控制"
@@ -40,7 +38,7 @@ msgid "An error has occurred"
 msgstr "发生了错误"
 
 msgid "Big: 248 bytes"
-msgstr ""
+msgstr "大：248 字节"
 
 msgid "Check type"
 msgstr "检查类型"
@@ -85,7 +83,7 @@ msgid "Disabled"
 msgstr "禁用"
 
 msgid "Disabled: detector is completely off."
-msgstr "Disabled: 检测器完全关闭"
+msgstr "已禁用：检测器完全关闭"
 
 msgid "Disconnected"
 msgstr "已断开"
@@ -124,7 +122,7 @@ msgid "Enabled"
 msgstr "已启用"
 
 msgid "Expecting:"
-msgstr ""
+msgstr "期望："
 
 msgid "Public IP"
 msgstr "IP"
@@ -133,7 +131,7 @@ msgid "Public IP address"
 msgstr "IP 地址"
 
 msgid "Failed to get %s init status: %s"
-msgstr ""
+msgstr "获取 %s 初始化状态失败：%s"
 
 msgid "Forced reboot delay"
 msgstr "强制重启延迟"
@@ -151,7 +149,7 @@ msgid "Hostname/IP address of the SMTP server."
 msgstr "SMTP服务器的主机名/IP地址"
 
 msgid "Hosts"
-msgstr ""
+msgstr "主机列表"
 
 msgid "Hosts polling interval when the Internet is down."
 msgstr "当互联网断开连接时，主机轮询间隔"
@@ -165,34 +163,34 @@ msgid ""
 msgstr "检查互联网可用性的主机。按列表顺序轮询主机，直到至少有一个响应为止"
 
 msgid "Huge: 1492 bytes"
-msgstr ""
+msgstr "超大：1492 字节"
 
 msgid "Interface"
 msgstr "接口"
 
 msgid "Internet"
-msgstr "Internet"
+msgstr "互联网"
 
 msgid "Internet Detector"
-msgstr "Internet Detector"
+msgstr "网络检测"
 
 msgid "Internet detector mode"
-msgstr "Internet 检测器模式"
+msgstr "检测器模式"
 
 msgid "Internet status"
-msgstr "Internet 状态"
+msgstr "联网状态"
 
 msgid "Interval between IP address requests."
 msgstr "IP地址请求之间的时间间隔"
 
 msgid "Jumbo: 9000 bytes"
-msgstr ""
+msgstr "巨帧：9000 字节"
 
 msgid "LED control"
 msgstr "LED 控制"
 
 msgid "Loading"
-msgstr ""
+msgstr "加载中"
 
 msgid ""
 "Longest period of time after connecting to Internet before \"up-script\" "
@@ -266,7 +264,7 @@ msgid "One of the following:"
 msgstr "以下之一"
 
 msgid "Password"
-msgstr ""
+msgstr "密码"
 
 msgid "Password for SMTP authentication."
 msgstr "SMTP认证密码"
@@ -292,7 +290,7 @@ msgid "Recipient"
 msgstr "接收者"
 
 msgid "Restart"
-msgstr ""
+msgstr "重启"
 
 msgid "Restart attempts"
 msgstr "重新启动尝试"
@@ -322,7 +320,7 @@ msgid "SMTP server port"
 msgstr "SMTP 服务端口"
 
 msgid "SSL: SMTP over SSL."
-msgstr "SSL: SMTP over SSL"
+msgstr "SSL：SMTP over SSL"
 
 msgid "Save"
 msgstr "保存"
@@ -367,10 +365,10 @@ msgid "Shell commands to run when disconnected from the Internet."
 msgstr "断开Internet时要运行的Shell命令"
 
 msgid "Small: 1 byte"
-msgstr ""
+msgstr "小：1 字节"
 
 msgid "Standard: 56 bytes"
-msgstr ""
+msgstr "标准：56 字节"
 
 msgid "Stopped"
 msgstr "已停止"
@@ -418,37 +416,37 @@ msgid "Waiting for a reboot to complete before performing a forced reboot."
 msgstr "在执行强制重启之前，等待重新启动完成"
 
 msgid "Web UI only"
-msgstr ""
+msgstr "仅 Web UI"
 
 msgid "Web UI only: detector works only when the Web UI is open (UI detector)."
-msgstr "Web UI only: 检测器仅在Web UI打开时工作（UI检测器）"
+msgstr "仅 Web UI：检测器仅在 Web UI 打开时工作（UI 检测器）"
 
 msgid "Windows: 32 bytes"
-msgstr ""
+msgstr "Windows：32 字节"
 
 msgid "Write messages to the system log."
 msgstr "将消息写入系统日志"
 
 msgid "down-script"
-msgstr ""
+msgstr "断线脚本"
 
 msgid "hour"
-msgstr ""
+msgstr "小时"
 
 msgid "hours"
-msgstr ""
+msgstr "小时"
 
 msgid "min"
-msgstr ""
+msgstr "分钟"
 
 msgid "minutes"
-msgstr ""
+msgstr "分钟"
 
 msgid "sec"
-msgstr ""
+msgstr "秒"
 
 msgid "seconds"
-msgstr ""
+msgstr "秒"
 
 msgid "up-script"
-msgstr ""
+msgstr "上线脚本"
