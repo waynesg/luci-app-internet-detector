@@ -1,118 +1,150 @@
 'use strict';
 'require baseclass';
 'require fs';
+'require rpc';
 'require uci';
 
 document.head.append(E('style', {'type': 'text/css'},
 `
 :root {
-	--app-id-font-color: #fff;
-	--app-id-connected-color: #2ea256;
-	--app-id-disconnected-color: #ff4e54;
-	--app-id-undefined-color: #8a8a8a;
+	--app-id-font-color: #454545;
+	--app-id-font-shadow: #fff;
+	--app-id-connected-color: #6bdebb;
+	--app-id-disconnected-color: #f8aeba;
+	--app-id-undefined-color: #dfdfdf;
 }
 :root[data-darkmode="true"] {
+	--app-id-font-color: #f6f6f6;
+	--app-id-font-shadow: #4d4d4d;
 	--app-id-connected-color: #005F20;
 	--app-id-disconnected-color: #a93734;
 	--app-id-undefined-color: #4d4d4d;
 }
 .id-connected {
+	--on-color: var(--app-id-font-color);
 	background-color: var(--app-id-connected-color) !important;
+	border-color: var(--app-id-connected-color) !important;
 	color: var(--app-id-font-color) !important;
+	text-shadow: 0 1px 1px var(--app-id-font-shadow);
 }
 .id-disconnected {
+	--on-color: var(--app-id-font-color);
 	background-color: var(--app-id-disconnected-color) !important;
+	border-color: var(--app-id-disconnected-color) !important;
 	color: var(--app-id-font-color) !important;
+	text-shadow: 0 1px 1px var(--app-id-font-shadow);
 }
 .id-undefined {
+	--on-color: var(--app-id-font-color);
 	background-color: var(--app-id-undefined-color) !important;
+	border-color: var(--app-id-undefined-color) !important;
 	color: var(--app-id-font-color) !important;
+	text-shadow: 0 1px 1px var(--app-id-font-shadow);
+}
+.id-label-status {
+	display: inline-block;
+	word-wrap: break-word;
+	margin: 2px !important;
+	padding: 4px 8px;
+	border: 1px solid;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	font-weight: bold;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 `));
 
 return baseclass.extend({
-	title      : _('Internet'),
-	appName    : 'internet-detector',
-	execPath   : '/usr/bin/internet-detector',
-	inetStatus : null,
-	publicIp   : null,
+	title          : _('Internet'),
+	appName        : 'internet-detector',
+	currentAppMode : null,
+	inetStatus     : null,
 
-	inetStatusFromJson: function(res) {
-		let curInetStatus = null;
-		let curPubIp      = null;
-		if(res.code === 0) {
-			try {
-				let json          = JSON.parse(res.stdout.trim());
-				curInetStatus = json.inet;
-				curPubIp      = json.mod_public_ip;
-			} catch(e) {};
-		};
-		return [ curInetStatus, curPubIp ];
+	callUIPoll: rpc.declare({
+		object: 'luci.internet-detector',
+		method: 'UIPoll',
+		expect: { '': {} }
+	}),
+
+	getUIPoll() {
+		return this.callUIPoll().then(data => {
+			return data;
+		});
 	},
 
-	load: async function() {
-		if(!(
-			'uiCheckIntervalUp' in window &&
-			'uiCheckIntervalDown' in window &&
-			'currentAppMode' in window
-		)) {
+	callInetStatus: rpc.declare({
+		object: 'luci.internet-detector',
+		method: 'InetStatus',
+		expect: { '': {} }
+	}),
+
+	getInetStatus() {
+		return this.callInetStatus().then(data => {
+			return data;
+		});
+	},
+
+	async load() {
+		if(!this.currentAppMode) {
 			await uci.load(this.appName).then(data => {
-				window.uiCheckIntervalUp   = Number(uci.get(this.appName, 'config', 'ui_interval_up'));
-				window.uiCheckIntervalDown = Number(uci.get(this.appName, 'config', 'ui_interval_down'));
-				window.currentAppMode      = uci.get(this.appName, 'config', 'mode');
+				this.currentAppMode = uci.get(this.appName, 'config', 'mode');
 			}).catch(e => {});
 		};
 
-		if(window.currentAppMode === '1' || window.currentAppMode === '2') {
-			window.internetDetectorCounter = ('internetDetectorCounter' in window) ?
-				++window.internetDetectorCounter : 0;
-
-			if(!('internetDetectorState' in window)) {
-				window.internetDetectorState = 2;
-			};
-
-			if(window.currentAppMode === '1' && (
-				(window.internetDetectorState === 0 && window.internetDetectorCounter % window.uiCheckIntervalUp) ||
-				(window.internetDetectorState === 1 && window.internetDetectorCounter % window.uiCheckIntervalDown)
-			)) {
-				return;
-			};
-
-			window.internetDetectorCounter = 0;
-			return L.resolveDefault(fs.exec(this.execPath, [ 'inet-status-json' ]), null);
+		if(this.currentAppMode == '2') {
+			return this.getUIPoll();
 		}
-		else {
-			window.internetDetectorState = 2;
+		else if(this.currentAppMode == '1') {
+			return L.resolveDefault(this.getInetStatus(), null);
 		};
 	},
 
-	render: function(data) {
-		if(window.currentAppMode === '0') {
-			return
-		};
-
-		if(data) {
-			[ window.internetDetectorState, this.publicIp ] = this.inetStatusFromJson(data);
-		};
-
-		let internetStatus = E('span', { 'class': 'label' });
-
-		if(window.internetDetectorState === 0) {
-			internetStatus.textContent      = _('Connected') + (this.publicIp ? ' | %s: %s'.format(_('Public IP'), _(this.publicIp)) : '');
-			internetStatus.className = "label id-connected";
+	render(data) {
+		if(this.currentAppMode == '0') {
+			return;
 		}
-		else if(window.internetDetectorState === 1) {
-			internetStatus.textContent      = _('Disconnected');
-			internetStatus.className = "label id-disconnected";
-		}
-		else {
-			internetStatus.textContent      = _('Undefined');
-			internetStatus.className = "label id-undefined";
+
+		this.inetStatus = data;
+
+		let inetStatusArea = E('div', {});
+
+		if(!this.inetStatus || !this.inetStatus.instances || this.inetStatus.instances.length == 0) {
+			let label = E('span', { 'class': 'id-label-status id-undefined' }, _('Undefined'));
+			if(this.currentAppMode == '2') {
+				label.classList.add('spinning');
+			};
+			inetStatusArea.append(label);
+		} else {
+			this.inetStatus.instances.sort((a, b) => a.num - b.num);
+
+			for(let i of this.inetStatus.instances) {
+				let status    = _('Disconnected');
+				let className = 'id-label-status id-disconnected';
+				if(i.inet == 0) {
+					status    = _('Connected');
+					className = 'id-label-status id-connected';
+				}
+				else if(i.inet == -1) {
+					status    = _('Undefined');
+					className = 'id-label-status id-undefined spinning';
+				};
+
+				let publicIp = (i.mod_public_ip !== undefined) ?
+					' | %s: %s'.format(_('Public IP'), (i.mod_public_ip == '') ? _('Undefined') : _(i.mod_public_ip))
+				: '';
+
+				inetStatusArea.append(
+					E('span', { 'class': className }, '%s%s%s'.format(
+						i.instance + ': ', status, publicIp)
+					)
+				);
+			};
 		};
 
 		return E('div', {
 			'class': 'cbi-section',
 			'style': 'margin-bottom:1em',
-		}, internetStatus);
+		}, inetStatusArea);
 	},
 });

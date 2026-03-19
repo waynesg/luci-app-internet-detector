@@ -3,17 +3,37 @@
 START=97
 STOP=01
 
-ID="/usr/bin/internet-detector"
+USE_PROCD=1
+PROG="/usr/bin/internet-detector"
 
-start() {
-	$ID
+run_instance() {
+	config_get enabled "$1" enabled "0"
+	if [ $enabled = "1" ]; then
+		procd_open_instance "$1"
+		procd_set_param command "$PROG" "-a" "nodaemon" "-i" "$1"
+		procd_set_param respawn
+		procd_set_param term_timeout 60
+		procd_close_instance
+	fi
 }
 
-stop() {
-	$ID stop
+start_service() {
+	config_load "internet-detector"
+	config_get mode "config" mode "0"
+	if [ $mode = "1" ]; then
+		config_foreach run_instance "instance"
+	fi
 }
 
-restart() {
+stop_service() {
+	$PROG -a stop
+}
+
+reload_service() {
 	stop
 	start
+}
+
+service_triggers() {
+	procd_add_reload_trigger "internet-detector"
 }
