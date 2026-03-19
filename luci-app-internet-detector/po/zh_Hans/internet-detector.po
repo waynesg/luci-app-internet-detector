@@ -169,7 +169,7 @@ msgid "Interface"
 msgstr "接口"
 
 msgid "Internet"
-msgstr "互联网"
+msgstr "联网状态"
 
 msgid "Internet Detector"
 msgstr "网络状态"
