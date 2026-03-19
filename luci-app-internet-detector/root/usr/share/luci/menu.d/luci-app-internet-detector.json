@@ -1,5 +1,5 @@
 {
-	"admin/services/internet-detector": {
+	"admin/status/internet-detector": {
 		"title": "Internet Detector",
 		"order": 80,
 		"action": {

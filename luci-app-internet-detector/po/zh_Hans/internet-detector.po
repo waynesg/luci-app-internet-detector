@@ -172,7 +172,7 @@ msgid "Internet"
 msgstr "互联网"
 
 msgid "Internet Detector"
-msgstr "网络检测"
+msgstr "网络状态"
 
 msgid "Internet detector mode"
 msgstr "检测器模式"
